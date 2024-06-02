@@ -1,10 +1,8 @@
 from fastapi import FastAPI, Query, HTTPException
 import json
 from fastapi.responses import JSONResponse
-from fastapi.middleware.gzip import GZipMiddleware
 
 app = FastAPI()
-app.add_middleware(GZipMiddleware, minimum_size=1000)
 
 
 @app.get("/data")
